@@ -22,6 +22,7 @@ The project is a profolio website hosted in S3 and served to internet via CloudF
 git clone https://github.com/loganmarchione/HaNQ-Portfolio.git
 cd HaNQ-Portfolio
 ```
+
 ### Commands
 
 All commands are run from the root of the project, from a terminal:
