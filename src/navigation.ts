@@ -1,9 +1,8 @@
-
 export const headerData = {
   links: [
     {
       text: 'Homes',
-      href:'#home',
+      href: '#home',
       links: [
         // {
         //   text: 'SaaS',
@@ -13,19 +12,19 @@ export const headerData = {
     },
     {
       text: 'About',
-      href: '#about'
+      href: '#about',
     },
     {
       text: 'Resume',
-      href: '#resume'
+      href: '#resume',
     },
     {
       text: 'Portfolio',
-      href: '#portfolio'
+      href: '#portfolio',
     },
     {
       text: 'Github',
-      href: 'https://github.com/vippr1237'
+      href: 'https://github.com/vippr1237',
     },
   ],
   actions: [{ text: 'Contact Now', href: 'https://www.linkedin.com/in/coangha13/', target: '_blank' }],
