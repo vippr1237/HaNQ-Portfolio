@@ -7,6 +7,7 @@ jobs:
   deploy-to-s3:
     if: github.event.deployment.task == 'deploy:github'
     runs-on: ubuntu-latest
+    environment: ${{ github.event.deployment.environment }}
     permissions:
       contents: 'read'
       id-token: 'write'
