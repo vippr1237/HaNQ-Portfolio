@@ -1,0 +1,40 @@
+name: Application CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  app-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup NodeJs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: CI
+        run: |
+          npm ci
+          npm run check
+
+  app-deploy:
+    if: github.event = 'push' && github.ref_name = 'main'
+    needs: [app-ci]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto Deploy to Trunk
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/${{ github.repository}}/deployments
+          task: deploy:github
+          ref: ${{ github.ref }}
+          required_context: '[]'
+          environment: 'trunk'
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}

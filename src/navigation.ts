@@ -1,4 +1,3 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -33,6 +32,8 @@ export const headerData = {
 };
 
 export const footerData = {
+  links: [],
+  secondaryLinks: [],
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/coangha13/' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },

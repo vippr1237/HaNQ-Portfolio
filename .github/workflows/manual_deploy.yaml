@@ -1,0 +1,25 @@
+name: Manual Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        required: false
+        description: Environment to deploy
+        default: 'trunk'
+
+jobs:
+  app-deploy:
+    needs: [app-ci]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto Deploy to ${{ inputs.environment }}
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/${{ github.repository}}/deployments
+          task: deploy:github
+          ref: ${{ github.ref }}
+          required_context: '[]'
+          environment: ${{ inputs.environment }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}

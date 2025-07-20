@@ -1,0 +1,24 @@
+name: Application Deploy
+
+on:
+  deployment:
+
+jobs:
+  deploy-to-s3:
+    if: github.event.deployment.task = 'deploy:github'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ var.AWS_ACCOUNT_ID }}:role/${{ var.AWS_ROLE }}
+          aws-region: ap-southeast-1
+      
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to S3
+        run: aws s3 sync dist/ s3://${{ var.AWS_BUCKET_NAME }} --recursive
