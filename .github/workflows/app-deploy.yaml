@@ -1,7 +1,7 @@
 name: Application Deploy
 
 on:
-  deployment:
+  - deployment
 
 jobs:
   deploy-to-s3:
