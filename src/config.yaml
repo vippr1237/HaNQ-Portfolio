@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Harvey Nguyen
+  site: 'https://coangha.dev'
   base: '/'
   trailingSlash: false
 
@@ -9,16 +9,16 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
+    default: Quang Ha
+    template: '%s — Quang Ha'
   description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Quang Ha
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/harvey.png'
         width: 1200
         height: 628
     type: website
@@ -33,7 +33,7 @@ i18n:
 
 apps:
   blog:
-    isEnabled: true
+    isEnabled: false
     postsPerPage: 6
 
     post:
