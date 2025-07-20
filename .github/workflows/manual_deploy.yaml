@@ -15,7 +15,7 @@ jobs:
       - name: Auto Deploy to ${{ inputs.environment }}
         uses: octokit/request-action@v2.x
         with:
-          route: GET /repos/${{ github.repository}}/deployments
+          route: POST /repos/${{ github.repository}}/deployments
           task: deploy:github
           ref: ${{ github.ref }}
           required_context: '[]'
