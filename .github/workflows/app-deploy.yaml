@@ -7,6 +7,9 @@ jobs:
   deploy-to-s3:
     if: github.event.deployment.task == 'deploy:github'
     runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

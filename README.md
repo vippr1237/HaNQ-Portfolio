@@ -11,6 +11,8 @@ This repo contains the source for https://coangha.dev, powered by [AstroWind](ht
 
 The project is a profolio website hosted in S3 and served to internet via CloudFront. All the change will be checked, build and deployed to coangha.dev
 
+Demo site: http://coangha.dev.s3-website-ap-southeast-1.amazonaws.com/
+
 ![Architecture](architecture.png)
 
 ## Usage
