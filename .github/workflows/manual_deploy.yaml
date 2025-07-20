@@ -10,7 +10,6 @@ on:
 
 jobs:
   app-deploy:
-    needs: [app-ci]
     runs-on: ubuntu-latest
     steps:
       - name: Auto Deploy to ${{ inputs.environment }}

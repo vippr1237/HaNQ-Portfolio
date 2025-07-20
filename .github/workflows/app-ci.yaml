@@ -31,10 +31,11 @@ jobs:
       - name: Auto Deploy to Trunk
         uses: octokit/request-action@v2.x
         with:
-          route: GET /repos/${{ github.repository}}/deployments
-          task: deploy:github
+          route: POST /repos/${{ github.repository}}/deployments
+          task: 'deploy:github'
           ref: ${{ github.ref }}
           required_context: '[]'
           environment: 'trunk'
+          auto_merge: false
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
