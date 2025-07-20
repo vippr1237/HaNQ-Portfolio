@@ -24,7 +24,7 @@ jobs:
           npm run check
 
   app-deploy:
-    if: github.event = 'push' && github.ref_name = 'main'
+    if: github.event == 'push' && github.ref_name == 'main'
     needs: [app-ci]
     runs-on: ubuntu-latest
     steps:

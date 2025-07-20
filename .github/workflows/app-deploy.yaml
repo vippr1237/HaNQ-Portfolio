@@ -5,7 +5,7 @@ on:
 
 jobs:
   deploy-to-s3:
-    if: github.event.deployment.task = 'deploy:github'
+    if: github.event.deployment.task == 'deploy:github'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
