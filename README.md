@@ -1,9 +1,9 @@
 # coangha.dev
 
 [![CI/CD (HaNQ-Portfolio)](https://github.com/vippr1237/HaNQ-Portfolio/actions/workflows/app-ci.yaml/badge.svg)](https://github.com/vippr1237/HaNQ-Portfolio/actions/workflows/app-ci.yaml)
-[![](https://img.shields.io/website?down_color=red&down_message=offline&label=HaNQ-Portfolio&up_color=green&up_message=online&url=https%3A%2F%2FHaNQ-Portfolio)](https://coangha.dev)
+[![](https://img.shields.io/website?down_color=red&down_message=offline&label=coangha.dev&up_color=green&up_message=online&url=https%3A%2F%2FHaNQ-Portfolio)](https://coangha.dev)
 [![](https://img.shields.io/website?down_color=red&down_message=offline&label=vippr1237.github.io&up_color=green&up_message=online&url=https%3A%2F%2Fvippr1237.github.io)](https://vippr1237.github.io)
-[![](https://img.shields.io/website?down_color=red&down_message=offline&label=vippr1237.dev&up_color=green&up_message=online&url=https%3A%2F%2Fvippr1237.dev)](https://coangha.dev)
+[![](https://img.shields.io/website?down_color=red&down_message=offline&label=coangha.dev&up_color=green&up_message=online&url=https%3A%2F%2Fvippr1237.dev)](https://coangha.dev)
 
 ## Overview
 
